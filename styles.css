@@ -1,0 +1,68 @@
+/* === Global Page Styling === */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background: #f9f9f9;
+}
+
+/* === Part 1: Button Hover Transition === */
+#magicBtn {
+  padding: 12px 24px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  /* Transition effect for smooth scaling and color change */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#magicBtn:hover {
+  transform: scale(1.1); /* smooth transform */
+  background: #5145cd;  /* smooth color fade */
+}
+
+/* === Box for Animation === */
+#box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin: 30px auto;
+  border-radius: 10px;
+  /* Transition ensures smooth transform when JS modifies styles */
+  transition: transform 0.5s ease;
+}
+
+/* Triggered bounce animation using keyframes */
+.animate {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50px); }
+}
+
+/* === Popup Modal === */
+#popup {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f1f1f1;
+  border: 2px solid #333;
+  border-radius: 10px;
+  /* Smooth fade-in effect */
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Hidden by default */
+.hidden {
+  display: none;
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
